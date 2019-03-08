@@ -1,0 +1,109 @@
+<!--pages/class/class.wxml-->
+<view class="box">
+  <view class="header">
+    <span class="iconfont icon-houtui"></span>
+    <text class="gou">全部分类</text>
+  </view>
+  <view class="tab">
+    <view class="{{selected?'tabs':'tabss'}}" bindtap="selected">批把膏</view>
+    <view class="{{selected1?'tabs':'tabss'}}" bindtap="selected1">冰糖水</view>
+  </view>
+  <view class="{{selected?'show':'hidden'}}">
+    <!-- <view class="bt"> -->
+    <button class="pd_a">进入批把膏频道</button>
+    <span class="iconfont icon-qianjin houtui"></span>
+    <!-- </view> -->
+    <view class="lei">批把膏系列</view>
+    <view class="fenlei">
+      <view class="fenleis" bindtap="lb">
+        <image src="../../assets/img/g3.jpg" class="fenlei_a"></image>
+        <span class="sm">批把膏系列</span> 
+      </view>
+      <view class="fenleis">
+        <image src="../../assets/img/g3.jpg" class="fenlei_a"></image>
+        <span class="sm">批把膏系列</span> 
+      </view>
+      <view class="fenleis">
+        <image src="../../assets/img/g3.jpg" class="fenlei_a"></image>
+        <span class="sm">批把膏系列</span> 
+      </view>
+      <view class="fenleis">
+        <image src="../../assets/img/g3.jpg" class="fenlei_a"></image>
+        <span class="sm">批把膏系列</span> 
+      </view>
+      <view class="fenleis">
+        <image src="../../assets/img/g3.jpg" class="fenlei_a"></image>
+        <span class="sm">批把膏系列</span> 
+      </view>
+      <view class="fenleis">
+        <image src="../../assets/img/g3.jpg" class="fenlei_a"></image>
+        <span class="sm">批把膏系列</span> 
+      </view>
+      </view>
+      <view class="lei biao">川贝系列</view>
+      <view class="fenlei">
+        <view class="fenleis">
+          <image src="../../assets/img/g3.jpg" class="fenlei_a"></image>
+          <span class="sm">批把膏系列</span> 
+        </view>
+        <view class="fenleis">
+          <image src="../../assets/img/g3.jpg" class="fenlei_a"></image>
+          <span class="sm">批把膏系列</span> 
+        </view>
+        <view class="fenleis">
+          <image src="../../assets/img/g3.jpg" class="fenlei_a"></image>
+          <span class="sm">批把膏系列</span> 
+        </view>
+    </view>
+    </view>
+  
+  <view class="{{selected1?'show':'hidden'}}">
+    <!-- <view class="bt"> -->
+    <button class="pd_a">进入冰糖水频道</button>
+    <span class="iconfont icon-qianjin houtui"></span>
+    <!-- </view> -->
+    <view class="lei">冰糖水系列</view>
+    <view class="fenlei">
+      <view class="fenleis" bindtap="lb">
+        <image src="../../assets/img/g3.jpg" class="fenlei_a"></image>
+        <span class="sm">冰糖水系列</span> 
+      </view>
+      <view class="fenleis">
+        <image src="../../assets/img/g3.jpg" class="fenlei_a"></image>
+        <span class="sm">批把膏系列</span> 
+      </view>
+      <view class="fenleis">
+        <image src="../../assets/img/g3.jpg" class="fenlei_a"></image>
+        <span class="sm">批把膏系列</span> 
+      </view>
+      <view class="fenleis">
+        <image src="../../assets/img/g3.jpg" class="fenlei_a"></image>
+        <span class="sm">批把膏系列</span> 
+      </view>
+      <view class="fenleis">
+        <image src="../../assets/img/g3.jpg" class="fenlei_a"></image>
+        <span class="sm">批把膏系列</span> 
+      </view>
+      <view class="fenleis">
+        <image src="../../assets/img/g3.jpg" class="fenlei_a"></image>
+        <span class="sm">批把膏系列</span> 
+      </view>
+      </view>
+      <view class="lei biao">川贝水系列</view>
+      <view class="fenlei">
+        <view class="fenleis">
+          <image src="../../assets/img/g3.jpg" class="fenlei_a"></image>
+          <span class="sm">冰糖水系列</span> 
+        </view>
+        <view class="fenleis">
+          <image src="../../assets/img/g3.jpg" class="fenlei_a"></image>
+          <span class="sm">批把膏系列</span> 
+        </view>
+        <view class="fenleis">
+          <image src="../../assets/img/g3.jpg" class="fenlei_a"></image>
+          <span class="sm">批把膏系列</span> 
+        </view>
+    </view>
+    </view>
+
+</view>

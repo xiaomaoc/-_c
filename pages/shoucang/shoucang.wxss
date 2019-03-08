@@ -1,0 +1,75 @@
+/* pages/shoucang/shoucang.wxss */
+.header{
+  height:40px;
+  line-height: 40px;
+  font-size: 14px;
+  text-align: center;
+  background: #761cf1;
+  color:#fff;
+}
+.gou{
+  text-align: center;
+}
+.xq{
+  width:100%;
+  height:90px;
+  background: #fff;
+  margin-top:8px;
+}
+.jiaru_yca{
+  width:100px;
+  height:100px;
+  text-align: center;
+  border-radius: 3px;
+  display:inline-block;
+
+}
+.imgs{
+  width:80px;
+  height:80px;
+  margin-top:5px;
+}
+.jiaru_ycb{
+  width:45%;
+  font-size:12px;
+  overflow: hidden;
+  display:inline-block;
+  margin-bottom:25px;
+
+}
+.jiaru_ycba{
+  padding:3px 0;
+
+}
+.s{
+  display:block;
+  color:red;
+  font-size:13px;
+  font-weight:bold;
+}
+.jiaru_ycd{
+  margin:53px 0 0 5%;
+  font-size:14px;
+  border-bottom:1px solid #ccc;
+}
+.jiage{
+  width:10%;
+  display:inline-block;
+  float:right;
+  text-align: cnter;
+  font-size:15px;
+}
+.xx_da{
+  margin-top:64px;
+  float: right;
+  width:23%;
+}
+.xx_ctp{
+  width: 17px;
+  height: 17px;
+  margin:-2px auto;
+}
+.xx_cc{
+  color: #8a8a8a;
+  font-size: 17px;
+}

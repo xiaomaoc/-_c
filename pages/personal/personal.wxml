@@ -1,0 +1,100 @@
+
+<view class="box">
+  <view class="wxtx">
+    <view class="userinfo">
+      <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+      <block wx:else>
+      <view class="tpbh">
+        <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      </view>
+        <view class="wxx">
+          <text class="userinfo-nickname">昵称：{{userInfo.nickName}}</text>
+          <text class="userinfo-nickname" decode="{{true}}">I&nbsp;&nbsp;&nbsp;D ：xx998</text>
+          <text class="userinfo-nickname">等级：钻石会员</text>
+          <text class="userinfo-nickname">推荐：tt886</text>
+        </view>
+      </block>
+  </view>
+
+<!-- <button bindtap='login'>登录</button> -->
+
+
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+  </view>
+  <view class="lie">
+    <view class="yue" bindtap="yuee">
+      <image src="../../assets/icon/wodeyue.png" class="ye"></image>
+      <p class="lis">我的余额</p>
+    </view>
+     <view class="yue" bindtap="txmx">
+      <image src="../../assets/icon/tixianmx.png" class="ye"></image>
+      <p class="lis">提现明细</p>
+    </view>
+  </view>
+  <view class="lies" bindtap="order">
+    <view class="lies_a">
+      <view class="jiu">
+        <image src="../../assets/icon/wodedingdan.png" class="yes"></image>
+        <p class="lis">我的订单</p>
+      </view>
+
+    </view>
+    <view class="lies_a" bindtap="dizhi">
+      <view class="jiu">
+      <image src="../../assets/icon/wodedizhi.png" class="yes"></image>
+      <p class="lis">我的地址</p>
+      </view>
+    </view>
+    <view class="lies_a no"  bindtap="tuijian">
+      <view class="jiu">
+      <image src="../../assets/icon/tuijian.png" class="yes"></image>
+      <p class="lis">我的推荐</p>
+      </view>
+    </view>
+
+    <view class="lies_a" bindtap="shoucang">
+      <view class="jiu">
+      <image src="../../assets/icon/shoucang.png" class="yes"></image>
+      <p class="lis">我的收藏</p>
+      </view>
+    </view>
+    <view class="lies_a" bindtap="liuyan">
+      <view class="jiu">
+      <image src="../../assets/icon/liuyan.png" class="yes"></image>
+      <p class="lis">我的留言</p>
+      </view>
+    </view>
+    <view class="lies_a no" bindtap="pinglun">
+      <view class="jiu">
+      <image src="../../assets/icon/shaidan.png" class="yes"></image>
+      <p class="lis">评论晒单</p>
+      </view>
+    </view>
+    <view class="lies_a" bindtap="card">
+      <view class="jiu">
+        <image src="../../assets/icon/yinhangka.png" class="yes"></image>
+        <p class="lis">我的银行卡</p>
+      </view>
+    </view>
+    <view class="lies_a noss" bindtap="yaoqing">
+      <view class="jiu">
+        <image src="../../assets/icon/yaoqinghaoyou.png" class="yes"></image>
+        <p class="lis">邀请好友</p>
+      </view>
+    </view>
+    <view class="lies_a no noss" bindtap="set">
+      <view class="jiu">
+        <image src="../../assets/icon/wodeshezhi.png" class="yes"></image>
+        <p class="lis">我的设置</p>
+      </view>
+    </view>
+    <view class="lies_a nos" bindtap="tuihuo">
+      <view class="jiu">
+        <image src="../../assets/icon/tuihuodan.png" class="yes"></image>
+        <p class="lis">我的退货单</p>
+      </view>
+    </view>
+  </view>
+</view>

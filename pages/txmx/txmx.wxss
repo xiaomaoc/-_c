@@ -1,0 +1,48 @@
+/* pages/txmx/txmx.wxss */
+.header{
+  height:40px;
+  line-height: 40px;
+  font-size: 14px;
+  text-align: center;
+  background: #761cf1;
+  color:#fff;
+}
+.gou{
+  text-align: center;
+}
+.yue{
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  background: #fff;
+  margin-bottom: 5px;
+}
+.yue_a{
+ font-size: 13px;
+ margin-left:5%;
+}
+.yue_b{
+   font-size: 20px;
+   color: #761cf1;
+}
+.zj{
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin-top: 100px;
+  display: block;
+  font-size: 15px;
+}
+.txmx{
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+  font-size:13px;
+  padding-left:5%;
+}
+.txmx_b{
+  color: red;
+}

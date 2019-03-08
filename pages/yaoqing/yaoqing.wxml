@@ -1,0 +1,13 @@
+<!--pages/yaoqing/yaoqing.wxml-->
+<view>
+  <view class="header">
+    <!-- <span class="iconfont icon-houtui"></span> -->
+    <text class="gou">我的邀请</text>
+  </view>
+  <view class="yq">
+    <text class="yq_a">{{bt}}</text>
+  </view>
+<!-- <view style='width:100%;height:100%;' bindlongpress='saveInviteCard'>
+  <canvas canvas-id="shareCanvas" style="width:{{windowWidth}}px;height:{{windowHeight}}px" ></canvas>
+</view> -->
+</view>

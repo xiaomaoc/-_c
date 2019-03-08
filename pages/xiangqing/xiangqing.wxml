@@ -1,0 +1,140 @@
+<!--pages/xiangqing/xiangqing.wxml-->
+<view class="box">
+    <swiper
+    indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}"
+    interval="{{interval}}"
+    duration="{{duration}}"
+    circular="{{circular}}"
+    style="height:400px;"
+    >
+      <block wx:for="{{good_loop}}" wx-for-item="item" wx:for-index="i" wx:key="good_info">
+        <swiper-item>
+          <image src="{{item.gl_pic}}" class="slide-image" style="width:100%;height:400px;"/>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="btt" wx:for="{{good_info}}" wx-for-item="item" wx:for-index="i" wx:key="good_info">
+      <text class="bt">{{item.goods_name}}</text>
+      <text class="jg">￥{{item.goods_pirce}}元</text>
+      <view style="width:100%;height:5px;background:#fff;"></view>
+    </view>
+    <view class="cs" bindtap="canshu">
+      <text class="cs_a">产品参数</text>
+      <span class="iconfont icon-qianjin houtui"></span>
+    </view>
+    <view class="cs" bindtap="pl">
+      <text class="cs_a">宝贝评价</text>
+      <span class="iconfont icon-qianjin houtui"></span>
+    </view>
+    <view class="cs">
+      <view class="bao">
+        <view class="shu"></view>
+        <text class="cs_b">商品信息</text>
+      </view>
+    </view>
+    <view wx:for="{{good_info}}" wx-for-item="item" wx:for-index="i" wx:key="good_info">
+      <image src="{{item.goods_longpic}}" class="tpxq"></image>
+    </view>
+    <view class="bottom">
+      <view class="bottom_l">
+        <view class="bottom_la a" bindtap="sys">
+          <image src="../../assets/icon/xshouye.png" class="tb"></image>
+          <text class="sm">首页</text>
+        </view>
+        <view class="bottom_la b" bindtap="car">
+          <image src="../../assets/icon/gouwu.png" class="tb"></image>
+          <text class="sm">购物车</text>
+        </view>
+        <view class="bottom_la c" bindtap="haveSave" id="{{goods_id}}">
+          <image src="{{isClick?'../../assets/icon/sc.png':'../../assets/icon/ysc.png'}}" class="tb"></image>
+          <text class="sm">收藏</text>
+        </view>
+      </view>
+      <view class="bottom_r">
+        <view class="bottom_a" bindtap="add">加入购物车</view>
+        <view class="bottom_a gm" bindtap="adds">立即购买</view>
+      </view> 
+    </view>
+    <!-- 加入购物车 -->
+    <view class="jiaru_yc hide{{showView ? '' : 'show'}}" wx:for="{{good_info}}" wx-for-item="item" wx:for-index="i" wx:key="good_info">
+      <view class="jiaru_yca"> 
+        <image src="{{item.goods_pic}}" class="imgs"></image>
+      </view>
+      <view class="jiaru_ycb">
+        <text class="jiaru_ycba">价格：￥{{item.goods_pirce}}元</text>
+        <text class="jiaru_ycc" bindtap="add">×</text>
+        <text class="jiaru_ycba s">库存：{{item.goods_stock}}件</text>
+      </view>
+      <view class="jiaru_ycd">
+        <text>购买数量</text>
+         <view class="stepper">
+            <!-- 减号 -->
+            <text class="{{minusStatus}}" bindtap="bindMinus">-</text>
+            <!-- 数值 -->
+            <input type="number" bindchange="bindManual" value="{{num}}" />
+            <!-- 加号 -->
+            <text class="normal" bindtap="bindPlus">+</text>
+        </view>
+      </view>
+      <view class="jiaru_yce" bindtap="add_a" id="{{goods_id}}">
+        <text>提交</text>
+      </view>
+    </view>
+    <!-- 立即购买 -->
+    <view class="jiaru_yc hides{{showViews ? '' : 'shows'}}" wx:for="{{good_info}}" wx-for-item="item" wx:for-index="i" wx:key="good_info">
+      <view class="jiaru_yca"> 
+        <image src="{{item.goods_pic}}" class="imgs"></image>
+      </view>
+      <view class="jiaru_ycb">
+        <text class="jiaru_ycba">价格：￥{{item.goods_pirce}}元</text>
+        <text class="jiaru_ycc" bindtap="adds">×</text>
+        <text class="jiaru_ycba s">库存：{{item.goods_stock}}件</text>
+      </view>
+      <view class="jiaru_ycd">
+        <text>购买数量</text>
+         <view class="stepper">
+            <!-- 减号 -->
+            <text class="{{minusStatus}}" bindtap="bindMinus">-</text>
+            <!-- 数值 -->
+            <input type="number" bindchange="bindManual" value="{{num}}" />
+            <!-- 加号 -->
+            <text class="normal" bindtap="bindPlus">+</text>
+        </view>
+      </view>
+      <view class="jiaru_yce" bindtap="addss" id="{{goods_id}}">
+        <text>提交</text>
+      </view>
+    </view>
+    <!-- 产品参数 -->
+    <!--pages/canshu/canshu.wxml-->
+    <view class="boxs hides{{canshu ? 'shows' : ''}}" wx:for="{{good_info}}" wx-for-item="item" wx:for-index="i" wx:key="good_info">
+      <text class="xx">商品信息</text>
+      <view class="lie">
+        <text class="xq">商品名称：</text>
+        <text class="xq_a xq_b">{{item.goods_name}}</text>
+      </view>
+      <view class="lie">
+          <text class="xq">商品编号：</text>
+          <text class="xq_a">{{item.goods_token}}</text>
+        </view>
+        <view class="lie">
+          <text class="xq">商品品牌：</text>
+          <text class="xq_a">{{item.goods_brand}}</text>
+        </view>
+        <view class="lie">
+          <text class="xq">上架时间：</text>
+          <text class="xq_a">{{item.goods_add_time}}</text>
+        </view>
+        <view class="lie">
+          <text class="xq">商品重量：</text>
+          <text class="xq_a">{{item.goods_heft}}克</text>
+        </view>
+        <view class="lie">
+          <text class="xq">商品库存：</text>
+          <text class="xq_a">{{item.goods_stock}}</text>
+        </view>
+      <text class="gb" bindtap="canshu">关闭</text>
+    </view>
+
+</view>

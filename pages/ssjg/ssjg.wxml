@@ -1,0 +1,32 @@
+<!--pages/ssjg/ssjg.wxml-->
+<view>
+  <view class="header">
+    <text class="gou">搜索结果</text>
+    <image src="../../assets/icon/syh.png" class="syh" bindtap="tabs"></image>
+  </view>
+  <view class='k'></view>
+  <view class="lb" bindtap="xq" wx:for="{{goods}}" wx-for-item="item" wx:for-index="i" wx:key="goods" id="{{item.goods_id}}">
+    <view>
+      <image src="{{item.goods_pic}}" class="tp"></image>
+      <text class="bt">{{item.goods_name}}</text>
+      <text class="jg">{{item.goods_pirce}}</text>
+      <text class="jgs">￥{{item.goods_markprice}}元</text>
+    </view>
+  </view>
+
+     <!-- tab -->
+  <view class="tab_tab hide{{showView_a ? '' : 'show'}}">
+      <view class="xx_das" bindtap="shouye">
+            <image src="../../assets/icon/bj_b.png" class="xx_ctps"></image>
+            <text class="xx_cbs">首页</text>
+      </view>
+      <view class="xx_das" bindtap="card_xxa">
+            <image src="../../assets/icon/bj_b.png" class="xx_ctps"></image>
+            <text class="xx_cbs">购物车</text>
+      </view>
+      <view class="xx_das" bindtap="wode">
+            <image src="../../assets/icon/bj_b.png" class="xx_ctps"></image>
+            <text class="xx_cbs">我的</text>
+      </view>
+  </view>
+</view>

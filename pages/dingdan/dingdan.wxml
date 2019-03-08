@@ -1,0 +1,63 @@
+<!--pages/dingdan/dingdan.wxml-->
+<view class="box">
+  <view class="header">
+    <!-- <span class="iconfont icon-houtui"></span> -->
+    <text class="gou">确认订单</text>
+  </view>
+  <view class="dizhi" bindtap="dizhi">
+    <image src="../../assets/icon/wz_b.png" class="wz_b"></image>
+    <view class="dizhi_a">
+      <text class="sh">收货人：{{addr.ts_name}}</text>
+      <text class="dizhi_b">收货地址：{{addr.ts_place_info}}{{addr.ts_address}}</text>
+    </view>
+    <image src="../../assets/icon/bj_a.png" class="bj_a"></image>
+  </view>
+  <view class="xq" wx:for="{{xq}}" wx-for-item="item" wx:for-index="i" wx:key="xq">
+    <view class="jiaru_yca"> 
+        <image src="{{item.goods_pic}}" class="imgs"></image>
+      </view>
+    <view class="jiaru_ycb">
+        <text class="jiaru_ycba">{{item.goods_name}}</text>
+        <text class="jiaru_ycba s">￥{{item.goods_pirce}}元</text>
+      </view>
+      <view class="jiage">
+        <text class="jiaru_ycc">×{{item.goods_num}}</text>
+      </view>
+  </view>
+  <view class="cs">
+    <text class="cs_a">邮费</text>
+    <text class=" cs_a cs_b">免邮</text>
+    <span class="iconfont icon-qianjin houtui"></span>
+  </view>
+  <view class="cs">
+    <label class="ly">买家留言：</label>
+    <input type="text" placeholder="请填写想对卖家说的话..." class="lys"></input>
+  </view>
+  <view class="cs" style="border-bottom:1px solid #ccc;">
+    <image src="../../assets/icon/ps.png" class="peis"></image>
+    <text class="ps">选择配送方式</text>
+  </view>
+  <view class="kd">
+    <text class="kds">普通快递</text>
+  </view>
+  <view class="bottom">
+    <view class="zf">
+      <text class="zf_a">支付方式：</text>
+      <text class="zf_b">请选择支付方式</text>
+    </view>
+    <view class="zf">
+      <image src="../../assets/icon/wx.png" class="peis" style="float:left;"></image>
+      <text class="zf_c wx">微信</text>
+      <radio-group class="radio-group">
+        <label style="float:right;">
+            <radio checked="checked"/>
+        </label>
+      </radio-group>
+    </view>
+    <view class="zf"  wx:for="{{xq}}" wx-for-item="item" wx:for-index="i" wx:key="xq">
+      <text class="zf_j">合计：</text>
+      <text class="zf_f">￥{{item.goods_pirce}}元</text>
+      <text class="zf_zf" bindtap="zhifu">确认支付</text>
+    </view>
+  </view>
+</view>

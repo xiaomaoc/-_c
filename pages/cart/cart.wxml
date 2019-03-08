@@ -1,0 +1,22 @@
+<!--pages/cart/cart.wxml-->
+<view class="box">
+  <view class="header">
+    <!-- <span class="iconfont icon-houtui"></span> -->
+    <text class="gou">购物车</text>
+  </view>
+    <view class="xq" wx:for="{{cartlist}}" wx-for-item="item" wx:for-index="i" wx:key="cartlist">
+    <view class="jiaru_yca" bindtap="xq" id="{{item.goods_id}}"> 
+        <image src="{{item.goods_pic}}" class="imgs"></image>
+      </view>
+    <view class="jiaru_ycb">
+        <text class="jiaru_ycba">{{item.goods_name}}</text>
+        <text class="shul">x{{item.goods_num}}</text>
+        <text class="jiaru_ycba s">￥{{item.cart_money}}元</text>
+        <view class="xx_da" bindtap="move" id="{{item.goods_id}}">
+            <image src="../../assets/icon/move.png" class="xx_ctp" style="margin-left:9%;"></image>
+        </view>
+          
+      </view>
+  </view>
+</view>
+

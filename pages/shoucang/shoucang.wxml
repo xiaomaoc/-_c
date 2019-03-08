@@ -1,0 +1,19 @@
+<!--pages/shoucang/shoucang.wxml-->
+<view>
+  <view class="header">
+    <text class="gou">我的收藏</text>
+  </view>
+    <view class="xq" wx:for="{{shoucang}}" wx-for-item="item" wx:for-index="i" wx:key="shoucang">
+      <view class="jiaru_yca" bindtap="xq" id="{{item.goods_id}}"> 
+        <image src="{{item.goods_pic}}" class="imgs"></image>
+      </view>
+      <view class="jiaru_ycb">
+        <text class="jiaru_ycba">{{item.goods_name}}</text>
+        <text class="jiaru_ycba s">￥{{item.goods_pirce}}元</text>
+      </view>
+      <view class="xx_da" bindtap="move" id="{{item.col_id}}">
+          <image src="../../assets/icon/move.png" class="xx_ctp" style="margin-left:9%;"></image>
+          <text class="xx_cc">删除</text>
+      </view>
+  </view>
+</view>

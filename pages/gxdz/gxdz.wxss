@@ -1,0 +1,31 @@
+/* pages/gxdz/gxdz.wxss */
+.header{
+  height:40px;
+  line-height: 40px;
+  font-size: 14px;
+  text-align: center;
+  background: #761cf1;
+  color:#fff;
+}
+.gou{
+  text-align: center;
+}
+.tx_a{
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  font-size: 13px;
+  margin-top:90px;
+}
+.tx_c{
+  width: 30%;
+  height: 30px;
+  line-height: 30px;
+  padding:5px 20px;
+  color: #fff;
+  background: #761cf1;
+  border-radius: 5px;
+  margin-left:29%;
+  display:block;
+  margin-top:50px;
+}

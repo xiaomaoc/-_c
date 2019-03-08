@@ -1,0 +1,11 @@
+<!--pages/zhmx_ss/zhmx_ss.wxml-->
+<view>
+  <view class="header">
+    <text class="gou">支出</text>
+  </view>
+    <view wx:for="{{bzhmx_b}}" wx-for-item="item" wx:for-index="i" wx:key="bzhmx_b" class="zhmx_ss">
+      <text>您于  {{item.or_add_time}}  购买商品支出</text>
+      <text class="red">{{item.or_price}}</text>
+      <text>元</text>
+    </view>
+</view>

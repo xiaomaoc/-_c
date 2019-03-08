@@ -1,0 +1,39 @@
+<!--pages/liuyan/liuyan.wxml-->
+<view>
+    <view class="header">
+    <!-- <span class="iconfont icon-houtui"></span> -->
+    <text class="gou">我的留言</text>
+  </view>
+  <view class="liy" wx:for="{{liuyan}}" wx-for-item="item" wx:for-index="i" wx:key="liuyan">
+    <view class="liy_a">
+      <view class="liy_b"></view>
+      <text class="liy_c">留言</text>
+      <text class="liy_d">{{item.n_add_time}}</text>
+    </view>
+    <view class="liy_g">
+      <text class="liy_e">标题：</text>
+      <text class="liy_f">{{item.n_title}}</text>
+      <text class="liy_xx">{{item.n_msg}}</text>
+    </view>
+  </view>
+  <form bindsubmit="formSubmit">
+    <view style="background:#fff;height:487px;">
+      <view class="fb">发表留言</view>
+      <text class="ly_a">留言类型：</text>
+      <radio-group class="radio-group" bindchange="radioChange" name="sex">
+        <label class="radio" wx:for="{{items}}">
+            <radio value="{{item.sex}}" checked="{{item.checked}}"/>{{item.value}}
+        </label>
+      </radio-group>
+      <view class="ly_b">
+        <text class="ly_c">留言主题：</text>
+        <input class="ly_d" type="text" placeholder="主题" name="zhuti" value='{{form_info}}'></input>
+      </view>
+      <text class="ly_a">留言内容：</text>
+      <view class="ly_lb">
+          <textarea class="ly_x" name="neir" value='{{form_info}}' focus='{{focus}}' bindtap='changeFocus'></textarea>
+      </view>
+      <button class="tj save" formType="submit" bindtap="sendMessage">提交留言</button>
+    </view>
+  </form>
+</view>

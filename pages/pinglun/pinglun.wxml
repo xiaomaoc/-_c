@@ -1,0 +1,94 @@
+<!--pages/pinglun/pinglun.wxml-->
+<view>
+  <view class="header">
+    <!-- <span class="iconfont icon-houtui"></span> -->
+    <text class="gou">我的评论</text>
+  </view>
+  <view class="nav_title">
+    <view class="nav_tab">
+      <view wx:for="{{list}}" class="{{selected==index?'hidden':'show'}}" data-index='{{index}}' bindtap="selected">{{item}}
+        <view class="{{selected==index?'nav_underline':''}}"></view>
+      </view>
+    </view>
+    <!-- 全部 -->
+    <view wx:if="{{selected == 0}}">
+      <view wx:for="{{all}}" wx-for-item="item" wx:for-index="i" wx:key="all">
+        <view class="xq">
+        <view class="jiaru_yca"> 
+            <image src="{{item.goods_pic}}" class="imgs"></image>
+        </view>
+        <view class="jiaru_ycb">
+            <text class="jiaru_ycba">{{item.goods_name}}</text>
+            <text class="shijian">成交时间：{{item.co_add_time}}</text>
+        </view>
+        <view class="jiage">
+            <text class="jiaru_ycba s">￥{{item.or_price}}元</text>
+        </view>
+      </view>
+      <view style="width:100%;background:#fff;">
+          <view class="pinglun">
+            <text class="pinglun_a">评论：</text>
+            <text class="shais">xxx</text>
+          </view>
+        </view>
+          <view class="shai">
+            <text class="shai_a">晒单已超期</text>
+        </view>
+      </view>
+    </view>
+<!-- 待评价 -->
+  <view wx:for="{{daipj}}" wx-for-item="item" wx:for-index="i" wx:key="daipj">
+       <view wx:if="{{selected == 1}}">
+       <view class="xq">
+        <view class="jiaru_yca"> 
+            <image src="{{item.goods_pic}}" class="imgs"></image>
+          </view>
+        <view class="jiaru_ycb">
+            <text class="jiaru_ycba">{{item.goods_name}}</text>
+            <text class="shijian">成交时间：{{item.co_add_time}}</text>
+          </view>
+          <view class="jiage">
+            <text class="jiaru_ycba s">￥{{item.goods_name}}元</text>
+      </view>
+    </view>
+    <form bindsubmit='fabiao'>
+      <view style="width:100%;background:#fff;">
+      <view class="pinglun">
+        <textarea placeholder="评论：" class="textarea"  value='{{concent}}'   bindblur='bindTextAreaBlur'   focus="{{focus}}" >
+        </textarea>
+      </view>
+      </view>
+      <view class="shai" >
+        <button  class="shai_a" style="padding: 5px 5%"  form-type="submit" wx:for="{{daipj}}" wx-for-item="item" wx:for-index="i" wx:key="daipj" id="{{item.order_id}}">发表</button >
+      </view>
+      </form>
+    </view>
+  </view>
+  <!-- 已评价 -->
+ <view wx:if="{{selected == 2}}" wx:for="{{yipj}}" wx-for-item="item" wx:for-index="i" wx:key="yipj">
+         <view class="xq">
+        <view class="jiaru_yca"> 
+            <image src="{{item.goods_pic}}" class="imgs"></image>
+          </view>
+        <view class="jiaru_ycb">
+            <text class="jiaru_ycba">{{item.goods_name}}</text>
+            <text class="shijian">成交时间：{{item.co_add_time}}</text>
+          </view>
+          <view class="jiage">
+            <text class="jiaru_ycba s">￥{{item.or_price}}元</text>
+      </view>
+    </view>
+      <view style="width:100%;background:#fff;">
+      <view class="pinglun">
+        <text class="shais">{{item.co_content}}</text>
+      </view>
+      </view>
+
+      <view class="shai">
+        <text class="shai_a">晒单已超期</text>
+      </view>
+    <view>
+    </view>
+    </view>
+  </view>
+</view>

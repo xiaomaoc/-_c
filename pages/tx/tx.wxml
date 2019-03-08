@@ -1,0 +1,48 @@
+<!--pages/tx/tx.wxml-->
+<view>
+   <view class="header">
+    <!-- <span class="iconfont icon-houtui"></span> -->
+    <text class="gou">提现</text>
+     <image src="../../assets/icon/syh.png" class="syh" bindtap="tabs"></image>
+  </view>
+  <form bindsubmit="formSubmit">
+  <view class="tixian">
+     <view class="tx">
+        <view class="tx_a">
+          <text class="tx_a">提现金额</text>
+        </view>
+        <view class="tx_a">
+          <text class="tx_qq">￥</text>
+          <input type="number" class="nm" name="money"/>
+        </view>
+      </view>
+      <view class="tx">
+        <text class="tx_as tx_a" style="margin-top:0;">可用余额：{{yue}}</text>
+        <view class="tx_a">
+          <text class="tx_qa">银行卡：</text>
+          <input type="text" class="nm" placeholder="请选择银行卡" disabled="disabled" bindtap="card" value="{{addr.bank_name}}" name="cart"/>
+          <span class="iconfont icon-qianjin houtui"></span>
+        </view>
+      </view>
+      <view class="tx_s">
+        <text class="tx_ss">提现说明：提现手续费{{qian}}%</text>
+      </view>
+  </view>
+    <button class="tj save" bindtap="tj" formType="submit">提交</button>
+    </form>
+    <!-- tab -->
+    <view class="tab_tab hide{{showView_a ? '' : 'show'}}">
+      <view class="xx_das" bindtap="shouye">
+            <image src="../../assets/icon/bj_b.png" class="xx_ctps"></image>
+            <text class="xx_cbs">首页</text>
+      </view>
+      <view class="xx_das" bindtap="card_xxa">
+            <image src="../../assets/icon/bj_b.png" class="xx_ctps"></image>
+            <text class="xx_cbs">购物车</text>
+      </view>
+      <view class="xx_das" bindtap="wode">
+            <image src="../../assets/icon/bj_b.png" class="xx_ctps"></image>
+            <text class="xx_cbs">我的</text>
+      </view>
+  </view>
+</view>

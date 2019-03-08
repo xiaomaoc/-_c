@@ -1,0 +1,18 @@
+<!--pages/txmx/txmx.wxml-->
+<view>
+  <view class="header">
+    <!-- <span class="iconfont icon-houtui"></span> -->
+    <text class="gou">提现明细</text>
+  </view>
+  <view class="yue">
+    <text class="yue_a">账户余额：</text>
+    <text class="yue_b">{{money}}</text>
+  </view>
+  <!-- <text class="zj">您没有任何申请记录哦！</text> -->
+  <view class="txmx"  wx:for="{{txmx}}" wx-for-item="item" wx:for-index="i" wx:key="txmx"> 
+    <text class="txmx_a">您于   {{item.tx_add_time}}     提现了</text>
+    <text class="txmx_b">{{item.tx_money}}</text>
+    <text class="txmx_c">元</text>
+  </view>
+</view>
+

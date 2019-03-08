@@ -1,0 +1,134 @@
+/* pages/dizhi/dizhi.wxss */
+.header{
+  height:40px;
+  line-height: 40px;
+  font-size: 14px;
+  text-align: center;
+  background: #761cf1;
+  color:#fff;
+}
+.gou{
+  text-align: center;
+}
+.xx{
+  width:100%;
+  background: #fff;
+  margin-bottom:8px;
+}
+.xx_a{
+  width: 90%;
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+  color:#8a8a8a;
+  margin-left:5%;
+}
+.l{
+  float: left;
+}
+.c{
+  margin-left:5%;
+  width:60%;
+  height:31px;
+  display:block;
+  float:left;
+}
+.r{
+  float: right;
+}
+.xx_ctp{
+  width: 17px;
+  height: 17px;
+  margin:-4px auto;
+}
+.xx_b{
+  width:100%;
+  height: 30px;
+  line-height: 30px;
+  margin-left:4%;
+  font-size: 12px;
+  color: #8a8a8a;
+}
+.radio-group{
+  float:left;
+  margin-left:5%;
+}
+.xx_c{
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+  border-top: 1px solid #ccc;
+}
+.xx_ca{
+  margin-left:3%;
+  font-size:12px;
+  color:#8a8a8a;
+}
+.xx_cb{
+  margin-left:4%;
+}
+.xx_d{
+  width:30%;
+  float: right;
+}
+.xx_da{
+  float: left;
+  width:43%;
+}
+.xx_e{
+  width: 100%;
+  height:35px;
+  line-height: 35px;
+  color:#fff;
+  text-align: center;
+  font-size: 13px;
+  border-radius: 3px;
+  background: #761cf1;
+  position: fixed;
+  bottom: 0;
+}
+.tab_tab{
+  width: 25%;
+  height: 93px;
+  background: rgba(0, 0, 0, 0.8); 
+  position: absolute;
+  top: 41px;
+  right: 0;
+}
+.xx_das{
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+.xx_cbs{
+  font-size:15px;
+}
+.xx_ctps{
+  width: 18px;
+  height: 18px;
+  margin:-3px auto;
+  margin-left:7%;
+  margin-right:7%;
+}
+.syh{
+  width: 20px;
+  height: 20px;
+  position: relative;
+  left:32%;
+  top:6px;
+}
+/* tabs */
+.hide{
+ display: none;
+}
+.hides{
+ display: none;
+}
+.show{ 
+ display: block;
+}
+.shows{
+  display: block;
+}

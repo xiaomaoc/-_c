@@ -1,0 +1,9 @@
+<!--pages/tuijian/tuijian.wxml-->
+<view>
+  <view class="header">
+    <!-- <span class="iconfont icon-houtui"></span> -->
+    <text class="gou">我的推荐</text>
+  </view>
+  <text class="tuijian_a">团队人数：</text><text class="tuijian_b">0</text>
+  <text class="tuijian_a">总人数：</text><text class="tuijian_b">0</text>
+</view>

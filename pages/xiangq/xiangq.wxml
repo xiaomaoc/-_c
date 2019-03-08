@@ -1,0 +1,85 @@
+<!--pages/xiangq/xiangq.wxml-->
+<view>
+  <view class="header">
+    <!-- <span class="iconfont icon-houtui"></span> -->
+    <text class="gou">我的订单</text>
+    <image src="../../assets/icon/syh.png" class="syh" bindtap="tabs"></image>
+  </view>
+
+  <view wx:for="{{xq}}" wx-for-item="item" wx:for-index="i" wx:key="xq">
+      <view class="top">
+        <view class="top_l">
+          <!-- <text class="top_ls">未付款</text> -->
+          <text class="top_ls">{{item.msg}}</text>
+        </view>
+        <!-- <text class="top_buttom">配送费用：￥0.00元</text> -->
+      </view>
+      <view class="con">
+        <text class="con_j">所选支付方式：微信支付</text>
+        <text class="con_j">应付款金额：{{item.or_price}}元</text>
+        <!-- <text class="con_z">立即支付</text> -->
+      </view>
+      <view class="con_a">
+        <image src="../../assets/icon/dili.png" class="con_a_t"></image>
+        <view class="xx_a">
+          <text class="l" style="margin-right:16%;">收货人：{{item.ts_name}}</text>
+          <text class="l">{{item.ts_phone}}</text> 
+        </view>
+        <view>
+          <text class="xx_bd">详细地址：{{item.ts_place_info}}{{item.ts_address}}</text>
+        </view>
+      </view>
+      <view class="con_b">
+        <image src="../../assets/icon/ps.png" class="con_a_s"></image>
+        <text class="con_bc">还没有物流信息</text>
+      </view>
+      <view class="buttom">
+        <view class="buttom_a">  
+          <image src="../../assets/icon/dp.png" class="con_a_t con_gg"></image>
+          <text class="buttom_b">网站自营</text>
+          <text class="buttom_c">></text>
+        </view>
+        <view class="xq">
+          <view class="jiaru_yca"> 
+              <image src="{{item.goods_pic}}" class="imgs"></image>
+            </view>
+          <view class="jiaru_ycb">
+              <text class="jiaru_ycba">{{item.goods_name}}</text>
+              <text class="jiaru_ycba s">￥{{item.goods_pirce}}元</text>
+            </view>
+            <view class="jiage">
+              <text class="jiaru_ycc">×{{item.or_goods_num}}</text>
+            </view>
+        </view>
+        <view class="right">
+            <text class="xiaoji">小计：￥{{item.or_price}}元</text>
+            <!-- <text class="xiaoji">申请退换货：</text> -->
+            <text class="xiaoji">商品总价：￥{{item.or_price}}元</text>
+            <text class="xiaoji">应付款金额：￥{{item.or_price}}元</text>
+        </view>
+        <view class="buttom_c">
+          <text class="buttom_bs">订单号：{{item.or_sn}}</text>
+          <text class="buttom_bs">配送方式：申通快递</text>
+          <text class="buttom_bs">支付方式：微信</text>
+        </view>
+        <!-- <view class="buttom_d">
+          <text class="qux">取消订单</text>
+        </view> -->
+      </view>
+  </view>
+  <!-- tabs -->
+    <view class="tab_tab hide{{showView_a ? '' : 'show'}}">
+      <view class="xx_das" bindtap="shouye">
+            <image src="../../assets/icon/bj_b.png" class="xx_ctps"></image>
+            <text class="xx_cbs">首页</text>
+      </view>
+      <view class="xx_das" bindtap="card">
+            <image src="../../assets/icon/bj_b.png" class="xx_ctps"></image>
+            <text class="xx_cbs">购物车</text>
+      </view>
+      <view class="xx_das" bindtap="wode">
+            <image src="../../assets/icon/bj_b.png" class="xx_ctps"></image>
+            <text class="xx_cbs">我的</text>
+      </view>
+  </view>
+</view>

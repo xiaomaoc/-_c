@@ -1,0 +1,57 @@
+<!--pages/dizhi/dizhi.wxml-->
+<view class="box">
+  <view class="header">
+    <!-- <span class="iconfont icon-houtui"></span> -->
+    <text class="gou">管理收货地址</text>
+    <!-- <image src="../../assets/icon/syh.png" class="syh" bindtap="tabs"></image> -->
+  </view>
+  <view class="xx" wx:for="{{dizhi}}" wx-for-item="item" wx:for-index="i" wx:key="dizhi" data-index='{{index}}'>
+    <view bindtap="xiugaidz" id="{{item.ts_id}}">
+      <view class="xx_a">
+        <text class="l">收货人：{{item.ts_name}}</text>
+
+        <text class="r">{{item.ts_phone}}</text>
+      </view>
+      <view class="xx_b">
+        <image src="../../assets/icon/wz_a.png" class="xx_bc xx_ctp"></image>
+        <text class="xx_bd">地址：{{item.ts_place_info}}</text>
+      </view>
+    </view>
+    <view class="xx_c">
+      <!-- <radio-group class="radio-group" bindchange="radioChange">
+        <label>
+            <radio bindtap="xuanz" id="{{item.ts_id}}" checked="{{item.checked}}"/>
+        </label>
+      </radio-group>  --> 
+      <text class="c" bindtap="xuanz" id="{{item.ts_id}}">默认地址</text>
+      <view class="xx_d">
+        <view class="xx_da" bindtap="add_xaa" id="{{item.ts_id}}">
+          <image src="../../assets/icon/bj_b.png" class="xx_ctp"></image>
+          <text class="xx_cb">编辑</text>
+        </view>
+        <view class="xx_da" bindtap="move" id="{{item.ts_id}}" data-index='{{index}}'>
+          <image src="../../assets/icon/move.png" class="xx_ctp" style="margin-left:9%;"></image>
+          <text class="xx_cc">删除</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="xx_e" bindtap="add">
+    <text class="xx_ea">添加新地址</text>
+  </view>
+
+  <!-- <view class="tab_tab">
+    <view class="xx_das" bindtap="shouye">
+          <image src="../../assets/icon/bj_b.png" class="xx_ctps"></image>
+          <text class="xx_cbs">首页</text>
+    </view>
+    <view class="xx_das" bindtap="card">
+          <image src="../../assets/icon/bj_b.png" class="xx_ctps"></image>
+          <text class="xx_cbs">购物车</text>
+    </view>
+    <view class="xx_das" bindtap="wode">
+          <image src="../../assets/icon/bj_b.png" class="xx_ctps"></image>
+          <text class="xx_cbs">我的</text>
+    </view>
+  </view> -->
+</view>

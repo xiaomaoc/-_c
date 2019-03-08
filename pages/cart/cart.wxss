@@ -1,0 +1,119 @@
+/* pages/cart/cart.wxss */
+
+.header{
+  height:40px;
+  line-height: 40px;
+  font-size: 14px;
+  text-align: center;
+  background: #761cf1;
+  color:#fff;
+}
+.gou{
+  text-align: center;
+}
+.xq{
+  width:100%;
+  height:90px;
+  background: #fff;
+  margin-top:8px;
+}
+.jiaru_yca{
+  width:100px;
+  height:100px;
+  text-align: center;
+  border-radius: 3px;
+  display:inline-block;
+  margin-left:9%;
+}
+.imgs{
+  width:80px;
+  height:80px;
+  margin-top:5px;
+}
+.jiaru_ycb{
+  width:56%;
+  font-size:12px;
+  overflow: hidden;
+  display:inline-block;
+  margin-bottom:20px;
+  /* margin-top:3px;
+  margin-right:5%; */
+}
+.jiaru_ycba{
+  padding:3px 0;
+  display:block;
+}
+.s{
+  color:red;
+  font-size:13px;
+  font-weight:bold;
+  float:left;
+  margin-left:7%;
+}
+.jiaru_ycd{
+  margin:53px 0 0 5%;
+  font-size:14px;
+  border-bottom:1px solid #ccc;
+}
+.jiage{
+  width:10%;
+  display:inline-block;
+  float:right;
+  text-align: cnter;
+  font-size:15px;
+}
+.stepper {
+	width: 86px;
+	height: 20px;
+	/*给主容器设一个边框*/
+	border: 1px solid #ccc;
+  float:left;
+}
+ 
+/*加号和减号*/
+.stepper text {
+	width: 21px;
+	line-height: 20px;
+	text-align: center;
+	float: left;
+}
+ 
+/*数值*/
+.stepper input {
+	width: 40px;
+	height: 20px;
+	float: left;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 12px;
+	/*给中间的input设置左右边框即可*/
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+}
+ input {
+  min-height:0;
+ }
+/*普通样式*/
+.stepper .normal{
+	color: red;
+}
+ 
+/*禁用样式*/
+.stepper .disabled{
+	color: #ccc;
+}
+.xx_ctp{
+  width: 17px;
+  height: 17px;
+  margin:-6px auto;
+}
+.shul{
+  float:left;
+  width:10%;
+  margin-top:3px;
+}
+.xx_da{
+  float: right;
+  width:15%;
+  height: 18px;
+}

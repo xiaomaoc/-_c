@@ -1,0 +1,36 @@
+/* pages/card/card.wxss */
+.header{
+  height:40px;
+  line-height: 40px;
+  font-size: 14px;
+  background: #761cf1;
+  color:#fff;
+}
+.gou{
+  margin-left:45%;
+}
+.add{
+  font-size: 12px;
+  color: #fff;
+  float: right;
+  margin-right:3%;
+}
+.card{
+  width: 90%;
+  height: 100px;
+  background: #761cf1;
+  border-radius: 5px;
+  margin:10px auto;
+  font-size:14px;
+  color: #fff;
+}
+.card_a{
+  width: 80%;
+  line-height: 20px;
+  margin-left:5%;
+  padding-top:10px;
+  display:inline-block;
+}
+.card_ar{
+  display: block;
+}

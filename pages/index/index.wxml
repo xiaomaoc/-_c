@@ -1,0 +1,44 @@
+<view class="content">
+<form bindsubmit="formSubmit">
+  <view class="ss">
+    <view class="ss_x">
+      <span class="iconfont icon-sousuo"></span>
+      <input type="text" class="ss_a" placeholder="输入搜索商品" name="userName" value='{{form_info}}' placeholder-class="center"></input>
+    </view>
+    <button class="ss_ss" formType="submit">搜索</button>
+  </view>
+  </form>
+  <swiper
+    indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}"
+    interval="{{interval}}"
+    duration="{{duration}}"
+    circular="{{circular}}"
+    style="margin-top:40px;"
+  >
+    <block wx:for="{{looppic}}" wx-for-item="item" wx:for-index="i"  wx:key="looppic">
+      <swiper-item>
+        <image src="{{item.pic}}" class="slide-image" style="width:100%;height:200px;"/>
+      </swiper-item>
+    </block>
+  </swiper>
+<view class="lie">
+      <view class="lie_a" bindtap="lb" wx:for="{{article}}" wx-for-item="item"  wx:if="{{i < 4}}" wx:for-index="i" wx:key="article" id="{{item.gc_id}}"> 
+             <image src="{{item.gc_pic}}" class="lie_aa"></image> 
+             <span class="text">{{item.gc_name}}</span>
+     </view>
+</view>
+<view class="lies">
+<text class="bt">热门商品</text>
+</view>
+<view>
+  <view class="lies_a" bindtap="xq" wx:for="{{goods}}" wx-for-item="item" wx:for-index="i"  wx:key="goods" id="{{item.goods_id}}">
+    <image src="{{item.goods_pic}}" class="lie_aas"></image> 
+    <text class="texts">{{item.goods_name}}</text>
+    <text class="texts" style="margin-left:8%;color:red">￥{{item.goods_pirce}}元</text>  
+  </view>
+
+</view>
+</view>
+
+

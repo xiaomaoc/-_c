@@ -1,0 +1,8 @@
+<view>
+  <view class="header">
+    <text class="gou">收入</text>
+  </view>
+    <view wx:for="{{bzhmx_a}}" wx-for-item="item" wx:for-index="i" wx:key="bzhmx_a" class="zhmx_ss">
+      <text>您于{{item.pg_add_time}} {{item.pg_content}}</text><text class="red">{{item.pg_money}}</text>
+    </view>
+</view>

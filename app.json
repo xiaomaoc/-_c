@@ -1,0 +1,78 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/class/class",
+    "pages/cart/cart",
+    "pages/personal/personal",
+    "pages/xiangqing/xiangqing",
+    "pages/liebiao/liebiao",
+    "pages/yuee/yuee",
+    "pages/shoucang/shoucang",
+    "pages/dingdan/dingdan",
+    "pages/dizhi/dizhi",
+    "pages/bianjidz/bianjidz",
+    "pages/gxdz/gxdz",
+    "pages/pl/pl",
+    "pages/tx/tx",
+    "pages/card/card",
+    "pages/addcard/addcard",
+    "pages/zhmx/zhmx",
+    "pages/txmx/txmx",
+    "pages/order/order",
+    "pages/xiangq/xiangq",
+    "pages/tuijian/tuijian",
+    "pages/pinglun/pinglun",
+    "pages/yaoqing/yaoqing",
+    "pages/tuihuo/tuihuo",
+    "pages/set/set",
+    "pages/jibenziliao/jibenziliao",
+    "pages/liuyan/liuyan",
+    "pages/ssjg/ssjg",
+    "pages/addd_z/addd_z",
+    "pages/zhmx_s/zhmx_s",
+    "pages/zhmx_ss/zhmx_ss"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "融之付",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#fff"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#761cf1",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "selectedIconPath": "assets/icon/shouye.png",
+        "iconPath": "assets/icon/xshouye.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "assets/icon/xgouwu.png",
+        "iconPath": "assets/icon/gouwu.png",
+        "pagePath": "pages/cart/cart",
+        "text": "购物车"
+      },
+      {
+        "selectedIconPath": "assets/icon/xgeren.png",
+        "iconPath": "assets/icon/geren.png",
+        "pagePath": "pages/personal/personal",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "functionalPages": true
+
+}

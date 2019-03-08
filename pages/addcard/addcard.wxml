@@ -1,0 +1,38 @@
+<!--pages/addcard/addcard.wxml-->
+<view>
+  <view class="header">
+    <!-- <span class="iconfont icon-houtui"></span> -->
+    <text class="gou">添加银行卡</text>
+  </view>
+  <form bindsubmit="formSubmit">
+  <view class="addcard addcards">
+    <view class="list-msg">
+      <view class="list-msg2" bindtap="bindShowMsg">
+        <text>{{tihuoWay}}</text>
+      </view>
+      <view class="select_box" wx:if="{{select}}">
+        <scroll-view scroll-y="true" style="height:300rpx">
+          <view class="select_one" bindtap="mySelect" data-name="中国银行">中国银行</view>
+          <view class="select_one" bindtap="mySelect" data-name="中国农业银行">中国农业银行</view>
+          <view class="select_one" bindtap="mySelect" data-name="中国工商银行">中国工商银行</view>
+          <view class="select_one" bindtap="mySelect" data-name="中国建设银行">中国建设银行</view>
+          <view class="select_one" bindtap="mySelect" data-name="中国邮政储蓄银行">中国邮政储蓄银行</view>
+          <view class="select_one" bindtap="mySelect" data-name="中国民生银行">中国民生银行</view>
+        </scroll-view>
+      </view>
+    </view>
+  </view>
+  <view class="addcards">
+    <text class="addcard_a">储蓄卡</text>
+  </view>
+    <view class="addcards">
+    <text class="addcard_a">银行卡号</text>
+    <input type="number" class="addcard_b" name="numbers"/>
+  </view>
+  <view class="addcards">
+    <text class="addcard_a">持有人</text>
+    <input type="text" class="addcard_b addcard_c" name="chiyouren"/>
+  </view>
+  <button class="tj" formType="submit">提交</button>
+  </form>
+</view>

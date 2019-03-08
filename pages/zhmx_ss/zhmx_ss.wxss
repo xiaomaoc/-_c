@@ -1,0 +1,32 @@
+/* pages/zhmx_ss/zhmx_ss.wxss */
+
+.header{
+  height:40px;
+  line-height: 40px;
+  font-size: 14px;
+  text-align: center;
+  background: #761cf1;
+  color:#fff;
+  margin-bottom: 5px;
+}
+.gou{
+  text-align: center;
+}
+.zhmx_s{
+  width: 100%;
+  height: 60px;
+  /* line-height: 50px; */
+  font-size: 13px;
+}
+.zhmx_ss{
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  background: #fff;
+  padding-left:3%;
+  font-size:13px;
+  border-bottom: 1px solid #ccc;
+}
+.red{
+  color: red;
+}

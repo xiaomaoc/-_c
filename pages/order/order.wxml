@@ -1,0 +1,148 @@
+<!--pages/order/order.wxml-->
+<view>
+  <view class="header">
+    <!-- <span class="iconfont icon-houtui"></span> -->
+    <text class="gou">我的订单</text>
+  </view>
+  <view class="nav_title">
+    <view class="nav_tab">
+      <view wx:for="{{list}}" class="{{selected==index?'hidden':'show'}}" data-index='{{index}}' bindtap="selected">{{item}}
+        <view class="{{selected==index?'nav_underline':''}}"></view>
+      </view>
+    </view>
+      <!-- tab框显示内容 -->
+        <view wx:if="{{selected == 0}}" wx:for="{{order}}" wx-for-item="item" wx:for-index="i" wx:key="order" style="margin-bottom:5px;">
+          <view class="top">
+            <text class="top_a">订单编号：{{item.or_sn}}</text>
+            <text class="top_b">网站自营></text>
+          </view>
+          <view class="center" bindtap="xiangq" id="{{item.order_id}}">
+            <view class="xq">
+              <view class="jiaru_yca"> 
+                  <image src="{{item.goods_pic}}" class="imgs"></image>
+                </view>
+              <view class="jiaru_ycb">
+                  <text class="jiaru_ycba">{{item.goods_name}}</text>
+                  <text class="jiaru_ycba s">￥{{item.goods_pirce}}元</text>
+                </view>
+            </view>
+          </view>
+          <view class="buttom">
+            <view class="buttom_r">
+              <text>共{{item.or_goods_num}}件商品</text>
+              <text>合计：￥{{item.or_price}}元</text>
+            </view>
+            <view class="buttom_rs">
+              <button class="buttom_rl" bindtap="xiangq" id="{{item.order_id}}" style="margin-left:72%;">查看订单</button>
+              <!-- <button class="buttom_rl buttom_rr">立即付款</button> -->
+            </view>
+          </view>
+        </view>
+        <view wx:if="{{selected == 1}}" style="margin-bottom:5px;" wx:for="{{order_one}}" wx-for-item="item" wx:for-index="i" wx:key="order_one">
+          <view class="top">
+            <text class="top_a">订单编号：{{item.or_sn}}</text>
+            <text class="top_b">网站自营></text>
+          </view>
+          <view class="center" bindtap="xiangq" id="{{item.order_id}}">
+            <view class="xq">
+              <view class="jiaru_yca"> 
+                  <image src="{{item.goods_pic}}" class="imgs"></image>
+                </view>
+              <view class="jiaru_ycb">
+                  <text class="jiaru_ycba">{{item.goods_name}}</text>
+                  <text class="jiaru_ycba s">￥{{item.goods_pirce}}元</text>
+                </view>
+            </view>
+          </view>
+          <view class="buttom">
+            <view class="buttom_r">
+              <text>共{{item.or_goods_num}}件商品</text>
+              <text>合计：￥{{item.or_price}}元</text>
+            </view>
+            <view class="buttom_rs">
+              <button class="buttom_rl" bindtap="move" id="{{item.order_id}}" style="margin-left:44%;">取消订单</button>
+              <button class="buttom_rl buttom_rr">立即付款</button>
+            </view>
+          </view>
+        </view>
+        <view wx:if="{{selected == 2}}" style="margin-bottom:5px;" wx:for="{{order_to}}" wx-for-item="item" wx:for-index="i" wx:key="order_to">
+          <view class="top">
+            <text class="top_a">订单编号：{{item.or_sn}}</text>
+            <text class="top_b">网站自营></text>
+          </view>
+          <view class="center" bindtap="xiangq" id="{{item.order_id}}">
+            <view class="xq">
+              <view class="jiaru_yca"> 
+                  <image src="{{item.goods_pic}}" class="imgs"></image>
+                </view>
+              <view class="jiaru_ycb">
+                  <text class="jiaru_ycba">{{item.goods_name}}</text>
+                  <text class="jiaru_ycba s">￥{{item.goods_pirce}}元</text>
+                </view>
+            </view>
+          </view>
+          <view class="buttom">
+            <view class="buttom_r">
+              <text>共{{item.or_goods_num}}件商品</text>
+              <text>合计：￥{{item.or_price}}元</text>
+            </view>
+            <view class="buttom_rs">
+              <button class="buttom_rl buttom_rlr" bindtap="xiangq">查看订单</button>
+            </view>
+          </view>
+        </view>
+        <view wx:if="{{selected == 3}}" style="margin-bottom:5px;" wx:for="{{order_san}}" wx-for-item="item" wx:for-index="i" wx:key="order_san">
+           <view class="top">
+            <text class="top_a">订单编号：{{item.or_sn}}</text>
+            <text class="top_b">网站自营></text>
+          </view>
+          <view class="center" bindtap="xiangq" id="{{item.order_id}}">
+            <view class="xq">
+              <view class="jiaru_yca"> 
+                  <image src="{{item.goods_pic}}" class="imgs"></image>
+                </view>
+              <view class="jiaru_ycb">
+                  <text class="jiaru_ycba">{{item.goods_name}}</text>
+                  <text class="jiaru_ycba s">￥{{item.goods_pirce}}元</text>
+                </view>
+            </view>
+          </view>
+          <view class="buttom">
+            <view class="buttom_r">
+              <text>共{{item.or_goods_num}}件商品</text>
+              <text>合计：￥{{item.or_price}}元</text>
+            </view>
+            <view class="buttom_rs">
+              <button class="buttom_rl buttom_rlr"  bindtap="queren" id="{{item.order_id}}">确认收货</button>
+            </view>
+          </view>
+        </view>
+        <view wx:if="{{selected == 4}}" style="margin-bottom:5px;" wx:for="{{order_for}}" wx-for-item="item" wx:for-index="i" wx:key="order_for">
+                  <view class="top">
+            <text class="top_a">订单编号：{{item.or_sn}}</text>
+            <text class="top_b">网站自营></text>
+          </view>
+          <view class="center" bindtap="xiangq" id="{{item.order_id}}">
+            <view class="xq">
+              <view class="jiaru_yca"> 
+                  <image src="{{item.goods_pic}}" class="imgs"></image>
+                </view>
+              <view class="jiaru_ycb">
+                  <text class="jiaru_ycba">{{item.goods_name}}</text>
+                  <text class="jiaru_ycba s">￥{{item.goods_pirce}}元</text>
+                </view>
+            </view>
+          </view>
+          <view class="buttom">
+            <view class="buttom_r">
+              <text>共{{item.or_goods_num}}件商品</text>
+              <text>合计：￥{{item.or_price}}元</text>
+            </view>
+            <view class="buttom_rs">
+              <button class="buttom_rl buttom_rlr">查看物流</button>
+              <button class="buttom_rl buttom_rlr" bindtap='tuihuo' id="{{item.order_id}}">申请退货</button>
+            </view>
+          </view>
+        </view>
+  </view> 
+</view>

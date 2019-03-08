@@ -1,0 +1,12 @@
+<!--pages/liebiao/liebiao.wxml-->
+<view class="box">
+<view class='k'></view>
+  <view class="lb" bindtap="xq" wx:for="{{goods}}" wx-for-item="item" wx:for-index="i" wx:key="goods" id="{{item.goods_id}}">
+    <view>
+      <image src="{{item.goods_pic}}" class="tp"></image>
+      <text class="bt">{{item.goods_name}}</text>
+      <text class="jg">{{item.goods_pirce}}</text>
+      <text class="jgs">￥{{item.goods_markprice}}元</text>
+    </view>
+  </view>
+</view>

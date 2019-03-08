@@ -1,0 +1,94 @@
+/* pages/tuihuo/tuihuo.wxss */
+.header{
+  height:40px;
+  line-height: 40px;
+  font-size: 14px;
+  text-align: center;
+  background: #761cf1;
+  color:#fff;
+}
+.gou{
+  text-align: center;
+}
+.top{
+  height: 30px;
+  line-height: 30px;
+  background: #fff;
+}
+.top_a{
+  margin-left: 3%;
+  font-size: 12px;
+  color: #8a8a8a;
+}
+.top_b{
+  float:right;
+  margin-right:4%;
+  font-size: 16px;
+}
+.xq{
+  width:100%;
+  height:90px;
+  margin-top:8px;
+}
+.jiaru_yca{
+  width:100px;
+  height:100px;
+  text-align: center;
+  border-radius: 3px;
+  float:left;
+}
+.imgs{
+  width:80px;
+  height:80px;
+  margin-top:5px;
+}
+.jiaru_ycb{
+  width:65%;
+  font-size:12px;
+  overflow: hidden;
+  float:left;
+  margin-top:3px;
+}
+.jiaru_ycba{
+  padding:3px 0;
+  color:#8a8a8a;
+}
+.s{
+  display:block;
+  color:red;
+  font-size:13px;
+  font-weight:bold;
+}
+.jiaru_ycd{
+  margin:53px 0 0 5%;
+  font-size:14px;
+  border-bottom:1px solid #ccc;
+}
+.buttom{
+  height: 25px;
+  background:#fff;
+  margin-top:7px;
+}
+.buttom_r{
+  height: 20px;
+  line-height: 25px;
+  width: 100%;
+  font-size: 12px;
+  color: #8a8a8a;
+  margin-left:61%;
+  margin-bottom:5px;
+}
+.buttom_rs{
+  height: 30px;
+  line-height: 30px;
+}
+.buttom_rl{
+  width: 23%;
+  height: 20px;
+  line-height: 20px;
+  background: #761cf1;
+  color: #fff;
+  font-size: 13px;
+  border: 5px;
+  float:left;
+}

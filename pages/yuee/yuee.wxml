@@ -1,0 +1,22 @@
+<!--pages/yuee/yuee.wxml-->
+<view class="box">
+  <view class="header">
+    <!-- <span class="iconfont icon-houtui"></span> -->
+    <text class="gou">资金管理</text>
+  </view>
+  <view class="jin">
+    <text class="ys">余额：{{yue_a}}</text>
+    <text class="y">可提金额：{{yue_a}}</text>
+    <text class="y">冻结金额：0.00</text> 
+  </view>
+  <view class="zhanghu">
+    <view class="zhanghu_a" bindtap="tx" >
+      <image src="../../assets/icon/tx.png" class="tx"></image>
+      <text class="zhanghu_b">提现</text>
+    </view>
+    <view class="zhanghu_a" style="border-right:none;" bindtap="zhmx">
+      <image src="../../assets/icon/zhmx.png" class="tx"></image>
+      <text class="zhanghu_b">账户明细</text>
+    </view>
+  </view>
+</view>

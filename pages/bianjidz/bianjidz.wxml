@@ -1,0 +1,52 @@
+<!--pages/bianjidz/bianjidz.wxml-->
+<view class="box">
+  <view class="header">
+    <text class="gou">收货地址编辑</text>
+    <image src="../../assets/icon/syh.png" class="syh" bindtap="tabs"></image>
+  </view>
+  <form bindsubmit="formSubmit">
+    <view class="bianji">
+      <view class="bianji_a">
+        <text class="bianji_as">收货人：</text>
+        <input type="text" placeholder="收货人" name="realname"  value="{{ts_name}}" class="bianji_ab"/>
+      </view>
+      <view class="bianji_a">
+        <text class="bianji_as">联系电话：</text>
+        <input type="text" placeholder="手机（必填）" name="mobile"  value="{{ts_phone}}" class="bianji_ab"/>
+      </view>
+      <view class="bianji_a">
+        <text class="bianji_as">所在地区：</text>
+    <view class="tui-picker-content">
+    <picker bindchange="changeRegin" mode = "region" value="{{region}}">
+    <view class="tui-picker-detail">{{region[0]}} - {{region[1]}} - {{region[2]}}</view>
+    </picker>
+    </view>
+      </view>
+      <view class="bianji_a kuan" style="border-bottom:none;">
+        <text class="bianji_as">详细地址：</text>
+        <input type="text" placeholder="请填写详细地址，不少于5个字" name="detail"  value="{{ts_address}}" class="bianji_ad"/>
+      </view>
+
+      <!-- <view class="bianji_a sqs">
+        <text class="bianji_as">设为默认地址</text>
+        <switch checked bindchange="switch1Change" />
+      </view> -->
+    </view>
+    <button class="tj save" bindtap="tj" formType="submit">提交</button>
+  </form>
+  <!-- tab -->
+  <view class="tab_tab hide{{showView_a ? 'show' : ''}}">
+      <view class="xx_das" bindtap="shouye">
+            <image src="../../assets/icon/bj_b.png" class="xx_ctps"></image>
+            <text class="xx_cbs">首页</text>
+      </view>
+      <view class="xx_das" bindtap="card_xxa">
+            <image src="../../assets/icon/bj_b.png" class="xx_ctps"></image>
+            <text class="xx_cbs">购物车</text>
+      </view>
+      <view class="xx_das" bindtap="wode">
+            <image src="../../assets/icon/bj_b.png" class="xx_ctps"></image>
+            <text class="xx_cbs">我的</text>
+      </view>
+  </view>
+</view>

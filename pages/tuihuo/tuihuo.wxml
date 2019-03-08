@@ -1,0 +1,34 @@
+<!--pages/tuihuo/tuihuo.wxml-->
+<view>
+  <view class="header">
+    <!-- <span class="iconfont icon-houtui"></span> -->
+    <text class="gou">退货单列表</text>
+  </view>
+
+        <view wx:for="{{tuihuo}}" wx-for-item="item" wx:for-index="i" wx:key="tuihuo" style="margin-bottom:5px;">
+          <view class="top">
+            <text class="top_a">订单编号：{{item.or_sn}}</text>
+          </view>
+          <view class="center" bindtap="xiangq" id="{{item.order_id}}">
+            <view class="xq">
+              <view class="jiaru_yca"> 
+                  <image src="{{item.goods_pic}}" class="imgs"></image>
+                </view>
+              <view class="jiaru_ycb">
+                  <text class="jiaru_ycba">{{item.goods_name}}</text>
+                  <text class="jiaru_ycba s">￥{{item.goods_pirce}}元</text>
+                </view>
+            </view>
+          </view>
+          <view class="buttom">
+            <view class="buttom_r">
+              <text>共{{item.or_goods_num}}件商品</text>
+              <text>合计：￥{{item.or_price}}元</text>
+            </view>
+            <!-- <view class="buttom_rs">
+              <button class="buttom_rl" bindtap="xiangq" id="{{item.order_id}}" style="margin-left:72%;">查看订单</button> -->
+              <!-- <button class="buttom_rl buttom_rr">立即付款</button> -->
+            <!-- </view> -->
+          </view>
+        </view>
+</view>

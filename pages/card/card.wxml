@@ -1,0 +1,17 @@
+<!--pages/card/card.wxml-->
+<view>
+  <view class="header">
+    <!-- <span class="iconfont icon-houtui"></span> -->
+    <text class="gou">银行卡</text>
+    <text class="add" bindtap="addcard">添加</text>
+  </view>
+  <view class="card" wx:for="{{card_xax}}" wx-for-item="item"  wx:for-index="i" wx:key="card_xax">
+    <view class="card_a" bindtap="tx" id="{{item.bank_id}}">
+      <text class="card_ar">{{item.bank_name}}</text>
+      <text class="card_ar">{{item.bank_class}}</text>
+      <text class="card_ar">{{item.bank_num}}</text>
+    </view>
+<text style="float:right;font-size:24px;margin-right:3%;" bindtap="move" id="{{item.bank_id}}">×</text>
+  </view>
+</view>
+

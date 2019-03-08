@@ -1,0 +1,11 @@
+<!--pages/gxdz/gxdz.wxml-->
+<view>
+  <view class="header">
+    <!-- <span class="iconfont icon-houtui"></span> -->
+    <text class="gou">系统提示</text>
+  </view>
+  <view class="tx_a">
+    <text class="tx_b">您的收货地址信息已成功更新！</text>
+    <text class="tx_c" bindtap="fh">返回地址列表</text>
+  </view> 
+</view>

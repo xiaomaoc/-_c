@@ -1,0 +1,20 @@
+/* pages/tuijian/tuijian.wxss */
+.header{
+  height:40px;
+  line-height: 40px;
+  font-size: 14px;
+  text-align: center;
+  background: #761cf1;
+  color:#fff;
+}
+.gou{
+  text-align: center;
+}
+.tuijian_a{
+  font-size: 13px;
+  margin: 15px 0 0 5%;
+}
+.tuijian_b{
+  font-size: 13px;
+  color:#761cf1;
+}
